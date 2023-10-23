@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const ObjectId = Schema.Types.ObjectId;
 
 // Declare the Schema of the Mongo model
-var categorySchema = new Schema({
+var prodCategorySchema = new Schema({
     title: {
         type: String,
         required: true,
@@ -15,4 +15,4 @@ var categorySchema = new Schema({
 });
 
 //Export the model
-module.exports = mongoose.model('Category', categorySchema);
+module.exports = mongoose.model('PCategory', prodCategorySchema);

@@ -10,7 +10,7 @@ const morgan = require("morgan");
 const authRouter = require("./routes/authRouter");
 const productRouter = require("./routes/productRouter");
 const blogRouter = require("./routes/blogRouter");
-const categoryRouter = require("./routes/categoryRouter");
+const ProdCategoryRouter = require("./routes/prodCategoryRouter");
 
 // PORT 
 require("dotenv").config();
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use("/api/user", authRouter);
 app.use("/api/product", productRouter);
 app.use("/api/blog", blogRouter);
-app.use("/api/category", categoryRouter);
+app.use("/api/category", ProdCategoryRouter);
 
 // middleware error handler and not foud
 app.use(notFound);
