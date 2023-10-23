@@ -1,4 +1,5 @@
 const mongoose = require('mongoose'); // Erase if already required
+
 const Schema = mongoose.Schema;
 const ObjectId = Schema.Types.ObjectId;
 
@@ -17,7 +18,7 @@ var blogSchema = new Schema({
         required: true,
     },
     numViews: {
-        type: String,
+        type: Number,
         default: 0,
     },
     isLiked: {
@@ -42,13 +43,13 @@ var blogSchema = new Schema({
     },
     images: []
 }, {
-    toJson: {
+    toJSON: {
         virtuals: true,
     },
     toObject: {
-        virtuals: true
+        virtuals: true,
     },
-    timestamps: true
+    timestamps: true,
 });
 
 //Export the model
